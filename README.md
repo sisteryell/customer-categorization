@@ -113,6 +113,6 @@ docker stop <container_id>
 ```
 
 ## 🚧 Future Improvements
--  Add Docker support to containerize the application for easier deployment and portability across environments
+-  Add Docker Compose support for easier multi-service orchestration
 -  CI/CD pipeline integration to automate tests and deployments
--  Deploy the app to a cloud platform (e.g., AWS, Heroku, or DigitalOcean) for production use
+-  Deploy the app to a cloud platform (e.g., AWS, Azure, or DigitalOcean) for production use
