@@ -5,8 +5,8 @@ This project implements a customer categorization system using both **Clustering
 ## Project Overview
 
 The goal of this project is to segment customers into distinct categories based on various features, and then build a machine learning model to predict the customer's category based on new input data. The project uses:
-- **Clustering (Unsupervised Learning)** to identify patterns in customer data and create meaningful customer segments.
-- **Classification (Supervised Learning)** to predict the customer segment for new data.
+- **Clustering** to identify patterns in customer data and create meaningful customer segments.
+- **Classification** to predict the customer segment for new data.
 - **FastAPI** to deploy the machine learning models in a web application for real-time predictions.
 
 - ## Project Structure
