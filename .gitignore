@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+customer/
+
+# VSCode settings
+.vscode/
+
+# Jupyter Notebook checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Environment variable files
+.env
+*.env
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Logs and runtime files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Model artifacts
+model/*.pkl
+model/*.joblib
+model/*.h5
+model/*.pt
+
+# Static files cache (if generated)
+static/
+
+# Ignore compiled templates
+templates/__pycache__/
+
+# Ignore any hidden folders/files created by tools
+.*.swp
