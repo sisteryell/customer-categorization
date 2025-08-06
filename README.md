@@ -16,16 +16,19 @@ The goal of this project is to segment customers into distinct categories based 
 ├── model/                                             # Folder for machine learning models
 │   └── catboost_best_model.cbm                        # Code to train and save models
 ├── notebooks/                                         # Jupyter notebooks
-│   └── Exploratory_Data_Analysis.ipynb                # exploratory data analysi
-│   └── Feature_engineering_and_clustering.ipynb       # feature engineering and clustering
-│   └── Feature_selection_and_Classification.ipynb     # feature selection andd classification
+│   ├── Exploratory_Data_Analysis.ipynb                # exploratory data analysis
+│   ├── Feature_engineering_and_clustering.ipynb       # feature engineering and clustering
+│   ├── Feature_selection_and_Classification.ipynb     # feature selection and classification
 │   └── marketing_campaign.csv                         # datasets
 ├── static/                                            # Static files (images, CSS for the web app)
 ├── templates/                                         # HTML templates for FastAPI front-end
+├── .dockerignore                                      # Docker ignore file
 ├── .gitignore                                         # Git ignore file
 ├── README.md                                          # Project documentation
 ├── app.py                                             # FastAPI application for real-time model predictions
+├── Dockerfile                                         # Dockerfile for containerizing the app
 └── requirements.txt                                   # List of Python dependencies
+
 ```
 
 ## 🚀 Setup
@@ -45,7 +48,9 @@ git clone https://github.com/sisteryell/customer-categorization.git
 cd customer-categorization
 ```
 
-### 2. Create and activate a virtual environment
+### 2. Run Locally with Python (optional)
+
+#### Create and activate a virtual environment:
 
 🔹 On macOS/Linux:
 
@@ -61,22 +66,51 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3. Install required dependencies
+#### Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Running the FastAPI App
-After installing the dependencies, you can start the FastAPI application.
+#### Start the FastAPI app:
 
-To start the FastAPI server locally, run:
 ```bash
 uvicorn app:app --reload
 ```
 
-The FastAPI app will be available at http://127.0.0.1:8000.
+The app will be available at http://127.0.0.1:8000.
 
+### 3. Run with Docker (recommended)
+
+#### Build docker image:
+
+```bash
+docker build -t customer-categorization-app .
+```
+
+#### Run the Docker container:
+
+```bash
+docker run -d -p 8000:8000 customer-categorization-app
+```
+
+#### Access the app:
+
+Open your browser and go to http://localhost:8000.
+
+#### Stop the container when done:
+
+Find the container ID with:
+
+```bash
+docker ps
+````
+
+Then stop it with:
+
+```bash
+docker stop <container_id>
+```
 
 ## 🚧 Future Improvements
 -  Add Docker support to containerize the application for easier deployment and portability across environments
