@@ -31,7 +31,7 @@ The goal of this project is to segment customers into distinct categories based 
 
 ```
 
-## 🚀 Setup
+## Setup
 
 ### Prerequisites
 
@@ -112,7 +112,7 @@ Then stop it with:
 docker stop <container_id>
 ```
 
-## 🚧 Future Improvements
+## Future Improvements
 -  Add Docker Compose support for easier multi-service orchestration
 -  CI/CD pipeline integration to automate tests and deployments
 -  Deploy the app to a cloud platform (e.g., AWS, Azure, or DigitalOcean) for production use
